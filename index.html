@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="../src/Control.MiniMap.css"/>
-
 </head>
 <body>
-   
+  
+  <div id="coordinates" class="coordinates-display"></div>
+
   <div id="map"></div>
 
   <div id="controls">
+  
     <input type="file" id="fileInput" accept=".zip" style="display:none;" />
     <button id="importerBtn" class="btn">Importar Shapefile</button>
     <!--<button id="downloadBtn" class="btn">Download Map</button>-->
@@ -37,6 +38,8 @@
   <script src="javascript/importer.js"></script>
   <script src="javascript/route.js"></script>
   <script src="javascript/draw.js"></script>
+  <script src="javascript/coordinate.js"></script>
+  
 
 </body>
 </html>

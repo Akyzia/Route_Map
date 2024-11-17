@@ -1,8 +1,18 @@
-#map {
-  height: 80vh;
-  width: 60vw;
-  border: 1px solid #9b9b9b; }/* Adiciona uma borda ao mapa para visualização */
+/* Evita a barra de rolagem e garante que o mapa ocupe toda a tela */
+body, html {
+  margin: 0;          /* Remove a margem padrão */
+  padding: 0;         /* Remove o padding padrão */
+  height: 100%;       /* Garantir que o body ocupe 100% da altura da tela */
+  overflow: hidden;   /* Impede a barra de rolagem */
+}
 
+#map {
+  position: absolute; /* Posiciona o mapa sem margens extras */
+  top: 0;             /* Ajusta o mapa para o topo */
+  left: 0;            /* Ajusta o mapa para a esquerda */
+  width: 100vw;       /* Faz o mapa ocupar toda a largura da tela */
+  height: 100vh;      /* Faz o mapa ocupar toda a altura da tela */
+}
 
   #controls {
     position: fixed; /* Faz o contêiner ficar fixo na tela */
@@ -63,4 +73,15 @@
 .btn:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Aumenta a sombra para destacar o botão */
   transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão */
+}
+.coordinates-display {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 3px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  z-index: 1000;
 }

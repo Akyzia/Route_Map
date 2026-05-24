@@ -1,0 +1,87 @@
+/* Prevents the scrollbar and ensures the map occupies the entire screen */
+body, html {
+  margin: 0;          /* Removes the default margin */
+  padding: 0;         /* Removes the default padding */
+  height: 100%;       /* Ensures the body occupies 100% of the screen height */
+  overflow: hidden;   /* Prevents the scrollbar */
+}
+
+#map {
+  position: absolute; /* Positions the map without extra margins */
+  top: 0;             /* Aligns the map to the top */
+  left: 0;            /* Aligns the map to the left */
+  width: 100vw;       /* Makes the map occupy the full screen width */
+  height: 100vh;      /* Makes the map occupy the full screen height */
+}
+
+  #controls {
+    position: fixed; /* Keeps the container fixed on the screen */
+    padding: 6px;
+    width: 160px;
+    top: 17px; /* Adjust as needed */
+    left: 60px; /* Adjust as needed */
+    z-index: 1000;
+    background-color: rgba(73, 73, 73, 0.726);
+    border-radius: 12px; /* Rounded border */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  
+  .btn {
+    margin: 3px;
+    padding: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+
+#importerBtn {
+  background-color: #4CAF50; /* Green */
+  position:relative;
+  width: 150px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 12px; /* Rounded border */
+}
+
+#toggleMarkersBtn {
+  background-color: rgb(97, 175, 238); /* Green */
+  position:relative;
+  width: 150px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 12px; /* Rounded border */
+}
+
+#fileInput {
+  display: none;
+}
+
+#deleteBtn {
+  background-color: rgb(223, 119, 119); /* Green */
+  position:relative;
+  width: 150px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 12px; /* Rounded border */
+}
+
+/* Effect when hovering over the buttons */
+.btn:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Increases the shadow to highlight the button */
+  transform: scale(1.05); /* Slightly increases the button size */
+}
+.coordinates-display {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 3px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  z-index: 1000;
+}

@@ -11,7 +11,6 @@ The project provides a lightweight WebGIS environment for spatial visualization 
 The application includes:
 
 - multiple basemaps;
-- shapefile import (.zip);
 - route generation;
 - waypoint creation;
 - geometric drawing tools;
